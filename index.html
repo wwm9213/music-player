@@ -1,0 +1,60 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script src="libs/flexible.js"></script>
+    <script src="js/music.js"></script>
+
+    <title>音乐播放器</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="bg"></div>
+        <audio src="music/If.mp3"></audio>
+        <main>
+            <header>
+                <i class="icon iconfont icon-chevron-thin-left"></i>
+                <span>
+                    <b class="song_name">if</b>
+                    <b class="singer">丁可</b>
+                </span>
+                <i class="icon iconfont icon-fenxiang3"></i>
+            </header>
+            <section>
+                <div class="s-bg">
+                    <div class="Sia"></div>
+                </div>
+                <div class="s-operation">
+                    <i class="icon iconfont icon-shoucang1"></i>
+                    <i class="icon iconfont icon-xiazai"></i>
+                    <i class="icon iconfont icon-xinxi"></i>
+                    <i class="icon iconfont icon-gengduo-01"></i>
+                </div>
+                <div class="s-time">
+                    <span id="startTime">00:00</span>
+                    <div class="t-line">
+                        <div class="line2" id="line2">
+                            <em class="t-focus" id="t_focus"></em>
+                        </div>
+                    </div>
+                    <span id="endTime"></span>
+                </div>
+                <div class="s-bot">
+                    <i class="icon iconfont icon-suijibofang"></i>
+                    <i class="icon iconfont icon-suopingshangyiqu prev"></i>
+                    <i class="icon iconfont icon-bofang2 off"></i>
+                    <i class="icon iconfont icon-suopingxiayiqu next"></i>
+                    <i class="icon iconfont icon-biaoqian"></i>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

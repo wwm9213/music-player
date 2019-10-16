@@ -1,0 +1,148 @@
+@import'common.scss';
+@import'myscss.scss';
+* {
+    @include sizing;
+}
+
+.wrap {
+    @include num(100%, 100%);
+    position: relative;
+    .bg {
+        @include num(100%, 100%);
+        background: url(../images/1.jpg) no-repeat 0 0;
+        background-size: 100%;
+        filter: blur(20px);
+    }
+    main {
+        @include num(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+header {
+    @include num(100%, pr(60px));
+    border: 1px solid #fff;
+    @include flex;
+    padding: 0 pr(15px);
+    span {
+        flex: 1;
+        @include flex(center);
+        flex-direction: column;
+        b {
+            color: #fff;
+            &:nth-child(1) {
+                font-size: pr(18px);
+            }
+            &:nth-child(2) {
+                font-size: pr(14px);
+                margin-top: pr(5px);
+            }
+        }
+    }
+    .icon {
+        &:nth-child(1) {
+            font-size: pr(22px);
+            color: #fff;
+        }
+        &:nth-child(3) {
+            font-size: pr(22px);
+            color: #ccc;
+        }
+    }
+}
+
+@keyframes rotates {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section {
+    flex: 1;
+    @include flex(flex-start);
+    flex-direction: column;
+    overflow: hidden;
+    .s-bg {
+        @include cir(pr(300px));
+        border: 50px solid #ccc;
+        margin-top: pr(76px);
+        .Sia {
+            @include cir(100%);
+            background: url(../images/1.jpg) no-repeat 0 0;
+            background-size: 100%;
+        }
+    }
+    .play {
+        animation: rotates 30s infinite linear;
+    }
+    .pause {
+        animation-play-state: paused;
+    }
+    .s-operation {
+        margin-top: pr(60px);
+        @include num(100%, pr(50px));
+        @include flex;
+        padding: 0 pr(28px);
+        .icon {
+            color: #fff;
+            font-size: pr(20px);
+            &:nth-child(1) {
+                color: #D53B31;
+            }
+            &:nth-child(4) {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .s-time {
+        @include num(100%, pr(25px));
+        margin-top: pr(20px);
+        @include flex;
+        padding: 0 pr(10px);
+        .t-line {
+            @include num(70%, pr(2px));
+            background: #fff;
+            .line2 {
+                @include num(0, 100%);
+                background: red;
+                position: relative;
+                .t-focus {
+                    @include cir(pr(10px));
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: pr(-5px);
+                    right: pr(-5px);
+                    // right: 0;
+                }
+            }
+        }
+        span {
+            font-size: pr(14px);
+            color: #fff;
+            padding: 0 pr(2px);
+            &:nth-child(1) {
+                margin-right: pr(8px);
+            }
+            &:nth-child(3) {
+                margin-left: pr(8px);
+            }
+        }
+    }
+    .s-bot {
+        @include num(100%, pr(80px));
+        @include flex;
+        padding: 0 pr(16px);
+        .icon {
+            font-size: pr(20px);
+            color: #fff;
+        }
+        .off {
+            font-size: pr(50px);
+        }
+    }
+}
